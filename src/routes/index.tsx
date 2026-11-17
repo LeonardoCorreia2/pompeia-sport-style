@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Crown, MapPin, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 
-import logo from "@/assets/kvl-logo.png.asset.json";
+import logo from "@/assets/kvl-logo.png";
 import hero from "@/assets/hero-kvl.jpg";
 import catCamisas from "@/assets/cat-camisas-milan.jpg";
 import catTenis from "@/assets/cat-tenis-tn.jpg";
@@ -48,7 +48,7 @@ function Index() {
       <header className="fixed inset-x-0 top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-md">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 md:px-8">
           <a href="#inicio" className="flex items-center gap-3">
-            <img src={logo.url} alt="KVL Grife" className="h-11 w-auto" width={66} height={44} />
+            <img src={logo} alt="KVL Grife" className="h-11 w-auto" width={66} height={44} />
           </a>
           <nav className="hidden items-center gap-8 text-sm font-medium uppercase tracking-widest text-muted-foreground md:flex">
             <a href="#colecao" className="transition-colors hover:text-foreground">Coleção</a>
@@ -76,7 +76,7 @@ function Index() {
         <div className="relative mx-auto w-full max-w-7xl px-5 py-20 md:px-8">
           <div className="max-w-2xl">
             <img
-              src={logo.url}
+              src={logo}
               alt="KVL Oficial"
               className="w-64 animate-rise drop-shadow-2xl md:w-96"
               width={384}
@@ -170,7 +170,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 py-24 md:grid-cols-2 md:px-8 md:py-32">
           <div className="relative flex justify-center">
             <div className="absolute inset-0 m-auto h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
-            <img src={logo.url} alt="Logo KVL Oficial" loading="lazy" className="relative w-full max-w-md" width={448} height={299} />
+            <img src={logo} alt="Logo KVL Oficial" loading="lazy" className="relative w-full max-w-md" width={448} height={299} />
           </div>
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Sobre a KVL</p>
@@ -202,7 +202,7 @@ function Index() {
       <footer id="contato" className="border-t border-border">
         <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-3 md:px-8">
           <div>
-            <img src={logo.url} alt="KVL Grife" loading="lazy" className="h-20 w-auto" width={120} height={80} />
+            <img src={logo} alt="KVL Grife" loading="lazy" className="h-20 w-auto" width={120} height={80} />
             <p className="mt-4 text-sm text-muted-foreground">Um projeto que já nasceu grande.</p>
           </div>
           <div>
