@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 
 const categories = [
   { title: "Camisas & Camisetas", text: "Mantos de time e básicas que vestem bem.", img: catCamisas, msg: "camisas e camisetas" },
-  { title: "Tênis", text: "Air Max TN e outros modelos pro dia a dia.", img: catTenis, msg: "tênis" },
+  { title: "Tênis", text: "Pisante certo pro dia a dia e pro rolê.", img: catTenis, msg: "tênis" },
   { title: "Bonés & Conjuntos", text: "Agasalhos, bonés e acessórios pra fechar o look.", img: catBones, msg: "bonés e conjuntos" },
 ];
 
