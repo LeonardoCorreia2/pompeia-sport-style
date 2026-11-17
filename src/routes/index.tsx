@@ -1,13 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, Crown, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, Crown, MapPin, MessageCircle, ShieldCheck, Sparkles } from "lucide-react";
 
 import logo from "@/assets/kvl-logo.png.asset.json";
 import hero from "@/assets/hero-kvl.jpg";
-import catCamisas from "@/assets/cat-camisas-clean.jpg";
-import catTenis from "@/assets/cat-tenis.jpg";
-import catBones from "@/assets/cat-bones-clean.jpg";
+import catCamisas from "@/assets/cat-camisas-brand.jpg";
+import catTenis from "@/assets/cat-tenis-tn.jpg";
+import catBones from "@/assets/cat-bones-brand.jpg";
 import { InstagramIcon, WhatsAppIcon } from "@/components/kvl/icons";
-import { INSTAGRAM_HANDLE, INSTAGRAM_URL, WHATSAPP_DISPLAY, whatsappLink } from "@/lib/kvl";
+import { ADDRESS_LINE, ADDRESS_MAPS_URL, INSTAGRAM_HANDLE, INSTAGRAM_URL, WHATSAPP_DISPLAY, whatsappLink } from "@/lib/kvl";
 
 const TITLE = "KVL Grife — Um projeto que já nasceu grande";
 const DESCRIPTION =
@@ -29,7 +29,7 @@ export const Route = createFileRoute("/")({
 
 const categories = [
   { title: "Camisas & Camisetas", text: "Mantos de time e básicas que vestem bem.", img: catCamisas, msg: "camisas e camisetas" },
-  { title: "Tênis", text: "Pisante certo pro dia a dia e pro rolê.", img: catTenis, msg: "tênis" },
+  { title: "Tênis", text: "Air Max TN e outros modelos pro dia a dia.", img: catTenis, msg: "tênis" },
   { title: "Bonés & Conjuntos", text: "Agasalhos, bonés e acessórios pra fechar o look.", img: catBones, msg: "bonés e conjuntos" },
 ];
 
@@ -198,45 +198,41 @@ function Index() {
         </div>
       </section>
 
-      {/* Contact CTA */}
-      <section id="contato" className="relative overflow-hidden">
-        <div className="absolute left-1/2 top-1/2 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/20 blur-3xl" />
-        <div className="relative mx-auto max-w-4xl px-5 py-28 text-center md:px-8 md:py-36">
-          <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Bora fechar?</p>
-          <h2 className="mt-4 font-display text-5xl uppercase leading-[0.95] md:text-7xl">
-            Seu próximo look <br />
-            <span className="text-chrome">tá na KVL</span>
-          </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-            Chama no WhatsApp pra fazer seu pedido ou segue no Instagram pra ficar por dentro das novidades.
-          </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
-            <a href={whatsappLink()} target="_blank" rel="noreferrer" className="btn-street">
-              <WhatsAppIcon className="h-5 w-5" /> {WHATSAPP_DISPLAY}
+      {/* Footer / Contato */}
+      <footer id="contato" className="border-t border-border">
+        <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 md:grid-cols-3 md:px-8">
+          <div>
+            <img src={logo.url} alt="KVL Grife" loading="lazy" className="h-20 w-auto" width={120} height={80} />
+            <p className="mt-4 text-sm text-muted-foreground">Um projeto que já nasceu grande.</p>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Endereço</h3>
+            <a
+              href={ADDRESS_MAPS_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-4 flex items-start gap-3 text-foreground transition-colors hover:text-primary"
+            >
+              <MapPin className="mt-0.5 h-5 w-5 shrink-0" />
+              <span>{ADDRESS_LINE}</span>
             </a>
-            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="btn-ghost-street">
-              <InstagramIcon className="h-5 w-5" /> {INSTAGRAM_HANDLE}
-            </a>
+          </div>
+          <div>
+            <h3 className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">Contato</h3>
+            <div className="mt-4 flex flex-col gap-3">
+              <a href={whatsappLink()} target="_blank" rel="noreferrer" className="flex items-center gap-3 transition-colors hover:text-primary">
+                <WhatsAppIcon className="h-5 w-5" /> {WHATSAPP_DISPLAY}
+              </a>
+              <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" className="flex items-center gap-3 transition-colors hover:text-primary">
+                <InstagramIcon className="h-5 w-5" /> {INSTAGRAM_HANDLE}
+              </a>
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="border-t border-border">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-5 py-10 md:flex-row md:px-8">
-          <div className="flex items-center gap-4">
-            <img src={logo.url} alt="KVL Grife" loading="lazy" className="h-12 w-auto" width={72} height={48} />
-            <p className="text-sm text-muted-foreground">Um projeto que já nasceu grande.</p>
-          </div>
-          <div className="flex items-center gap-4">
-            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer" aria-label="Instagram da KVL Grife" className="text-muted-foreground transition-colors hover:text-primary">
-              <InstagramIcon className="h-6 w-6" />
-            </a>
-            <a href={whatsappLink()} target="_blank" rel="noreferrer" aria-label="WhatsApp da KVL Grife" className="text-muted-foreground transition-colors hover:text-primary">
-              <WhatsAppIcon className="h-6 w-6" />
-            </a>
-          </div>
-          <p className="text-xs text-muted-foreground">© {new Date().getFullYear()} KVL Grife. Todos os direitos reservados.</p>
+        <div className="border-t border-border">
+          <p className="mx-auto max-w-7xl px-5 py-6 text-xs text-muted-foreground md:px-8">
+            © {new Date().getFullYear()} KVL Grife. Todos os direitos reservados.
+          </p>
         </div>
       </footer>
 

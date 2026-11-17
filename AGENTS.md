@@ -28,3 +28,7 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+<!-- AGENT-MEMORY:BEGIN -->
+- Store contact data (WhatsApp, Instagram, address) lives only in `src/lib/kvl.ts`; components import from there so one edit updates every link. Covered by `src/test/kvl-contact.test.ts`.
+<!-- AGENT-MEMORY:END -->
