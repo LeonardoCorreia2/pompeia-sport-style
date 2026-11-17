@@ -3,7 +3,7 @@ import { ArrowRight, Crown, MapPin, MessageCircle, ShieldCheck, Sparkles } from 
 
 import logo from "@/assets/kvl-logo.png.asset.json";
 import hero from "@/assets/hero-kvl.jpg";
-import catCamisas from "@/assets/cat-camisas-brand.jpg";
+import catCamisas from "@/assets/cat-camisas-milan.jpg";
 import catTenis from "@/assets/cat-tenis-tn.jpg";
 import catBones from "@/assets/cat-bones-brand.jpg";
 import { InstagramIcon, WhatsAppIcon } from "@/components/kvl/icons";
